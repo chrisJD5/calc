@@ -12,9 +12,14 @@ pipeline {
              sh 'make test'
             }
         }
+        stage('Delivery') {
+            steps {
+              sh 'docker build -t dockerCALC . '
+            }
         stage('Deploy') {
             steps {
               sh 'make deploy'
+              sh 'docker run -p  dockerCALC 5000 '  
             }
         }
     }
