@@ -8,8 +8,8 @@ run :
 	./build
 
 deploy: 
-	cd deploy
-	 ./build
+	mkdir deploy
+	 deploy/./build
 	
 test : test.c multiplication.c soustraction.c division.c addition.c operations.h
 	$(CC)  -o test test.c multiplication.c soustraction.c division.c addition.c operations.h 
