@@ -1,5 +1,6 @@
 FROM gcc
-RUN https://github.com/chrisJD5/calc/
+RUN git clone https://github.com/chrisJD5/calc/
 WORKDIR /testDockerC
 RUN make build
+
 
