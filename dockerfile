@@ -1,4 +1,5 @@
 FROM gcc
-COPY . /testDockerC
+RUN https://github.com/chrisJD5/calc/
 WORKDIR /testDockerC
-CMD ["gcc", "main.c"]
+RUN make build
+
