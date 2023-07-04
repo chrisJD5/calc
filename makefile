@@ -7,7 +7,7 @@ build : main.c multiplication.c soustraction.c division.c addition.c operations.
 run : 
 	./build
 
-deploy1: 
+deploy: 
 	cd deploy
 	 ./build
 	
